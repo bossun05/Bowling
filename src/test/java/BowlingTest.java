@@ -32,4 +32,10 @@ public class BowlingTest {
         Bowling player = new Bowling("1-2-3-4-5-6-7-8-9-1-");
         assertEquals(player.computeScore(), 46);
     }
+
+    @Test
+    public void testCombination(){
+        Bowling player = new Bowling("X9/--52X5/71X52X81");
+        assertEquals(player.computeScore(), 125);
+    }
 }

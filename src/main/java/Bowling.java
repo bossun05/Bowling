@@ -15,9 +15,13 @@ public class Bowling {
         for (int n = 0; n < scoreAllFrames.length(); n++) {
             this.scorePerRoll.add(Character.toString(scoreAllFrames.charAt(n)));
             this.statusPerRoll.add(checkStatus(Character.toString(scoreAllFrames.charAt(n))));
-            if (this.statusPerRoll.get(n).equals("Strike") ||  this.statusPerRoll.get(n).equals("Spare")) {
+            if (this.statusPerRoll.get(n).equals("Strike")) {
                 this.scorePerRoll.set(n, "10");
             }
+            if (this.statusPerRoll.get(n).equals("Spare")){
+                this.scorePerRoll.set(n, String.valueOf(10 - Integer.valueOf(this.scorePerRoll.get(n-1))));
+            }
+
             if (this.scorePerRoll.get(n).equals("-")){
                 this.scorePerRoll.set(n, "0");
             }
@@ -35,7 +39,7 @@ public class Bowling {
             n++;
             }
             else if (this.statusPerRoll.get(y) == "Spare"){
-                currentScore = Integer.valueOf(this.scorePerRoll.get(y)) - Integer.valueOf(this.scorePerRoll.get(y-1)) + Integer.valueOf(this.scorePerRoll.get(y+1));
+                currentScore = Integer.valueOf(this.scorePerRoll.get(y)) + Integer.valueOf(this.scorePerRoll.get(y+1));
                 totalScore = totalScore + currentScore;
             }
             else if (this.statusPerRoll.get(y) == "Normal"){
