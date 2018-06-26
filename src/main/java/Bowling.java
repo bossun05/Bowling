@@ -31,22 +31,22 @@ public class Bowling {
 
     public int computeScore() {
         int currentScore;
-        int y = 0;
-        for (int n = 0; n <= 19; n++){
-            if (this.statusPerRoll.get(y) == "Strike"){
-                currentScore = Integer.valueOf(this.scorePerRoll.get(y)) + Integer.valueOf(this.scorePerRoll.get(y+1)) + Integer.valueOf(this.scorePerRoll.get(y+2));
+        int rollPlace = 0;
+        for (int rollCount = 0; rollCount <= 19; rollCount++){
+            if (this.statusPerRoll.get(rollPlace) == "Strike"){
+                currentScore = Integer.valueOf(this.scorePerRoll.get(rollPlace)) + Integer.valueOf(this.scorePerRoll.get(rollPlace+1)) + Integer.valueOf(this.scorePerRoll.get(rollPlace+2));
                 totalScore = totalScore + currentScore;
-            n++;
+                rollCount++;
             }
-            else if (this.statusPerRoll.get(y) == "Spare"){
-                currentScore = Integer.valueOf(this.scorePerRoll.get(y)) + Integer.valueOf(this.scorePerRoll.get(y+1));
-                totalScore = totalScore + currentScore;
-            }
-            else if (this.statusPerRoll.get(y) == "Normal"){
-                currentScore = Integer.valueOf(this.scorePerRoll.get(y));
+            else if (this.statusPerRoll.get(rollPlace) == "Spare"){
+                currentScore = Integer.valueOf(this.scorePerRoll.get(rollPlace)) + Integer.valueOf(this.scorePerRoll.get(rollPlace+1));
                 totalScore = totalScore + currentScore;
             }
-            y++;
+            else if (this.statusPerRoll.get(rollPlace) == "Normal"){
+                currentScore = Integer.valueOf(this.scorePerRoll.get(rollPlace));
+                totalScore = totalScore + currentScore;
+            }
+            rollPlace++;
         }
 
         return totalScore;

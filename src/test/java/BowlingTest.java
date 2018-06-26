@@ -11,8 +11,8 @@ public class BowlingTest {
 
     @Test
     public void testScoreAllSpare() {
-        Bowling player = new Bowling("6/4/3/2/1/7/5/9/0/4/3");
-        assertEquals(player.computeScore(), 138);
+        Bowling player = new Bowling("5/5/5/5/5/5/5/5/5/5/5");
+        assertEquals(player.computeScore(), 150);
     }
 
     @Test
