@@ -1,0 +1,16 @@
+
+ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨œÍìøÿÿÿÿ8ı¿¬-
+rsquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(Âù‹Ï8ı¿¬-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷êÛÅ8ı¿¬-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¼ŞŞ¶8ı¿¬-
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(éÇò¼şÿÿÿÿ8ı¿¬-
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(§¿·8ı¿¬-
+asquid:UselessImportCheck"8Remove this unused import 'java.util.function.Supplier'.(†ïÿ‘8ı¿¬-
+Wsquid:S1068"6Remove this unused "replaceStrikeSpare" private field.(éÇò¼şÿÿÿÿ8ı¿¬-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.( òø8ı¿¬-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Û²Ó½8ı¿¬-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŠÃûöüÿÿÿÿ8ı¿¬-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´Ì±ùÿÿÿÿ8ı¿¬-
+Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(Âù‹Ï8ı¿¬-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(²õÛÃÿÿÿÿÿ8ı¿¬-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñÅ·8ı¿¬-
